@@ -55,7 +55,13 @@ node tools/install.mjs "D:/sillytavern"  # 或指到你的目录
 **方式 B：手动**。把 `plugin/` 与 `knowledge/` 复制到
 `<ST>/public/scripts/extensions/third-party/wanjie-xianlu/`。
 
-**方式 C：解压即用**。下载 Release 里的 `wanjie-xianlu-v1.2.0.zip`，解压到同一目录。
+**方式 C：下载 zip 解压**。任选其一，都是同一个仓库快照：
+
+- Releases 页：<https://github.com/c2ang/wanjie-xianlu/releases> → 最新版本下的 **Source code (zip)**
+- 主分支快照：<https://github.com/c2ang/wanjie-xianlu/archive/refs/heads/main.zip>
+
+解压后把 `wanjie-xianlu-main/`（或 `wanjie-xianlu-1.2.1/`）整个改名成 `wanjie-xianlu`，
+放进 `<ST>/public/scripts/extensions/third-party/`。
 
 装完：刷新页面（Ctrl+F5）→ 扩展面板出现「万界仙录」→ 打开面板 → 设置页点**「导入内置资料包」** →
 首页应显示 **1396 篇原文 / 252 条素材 / 318 条关联**。
