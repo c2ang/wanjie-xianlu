@@ -49,6 +49,7 @@ EXTRA = [
     ('docs/制卡器调用规范.md', 'docs/制卡器调用规范.md'),
     ('docs/制卡器提示词.md', 'docs/制卡器提示词.md'),
     ('docs/效果样例.md', 'docs/效果样例.md'),
+    ('docs/示例人物卡.json', 'docs/示例人物卡.json'),
     ('docs/交付报告.md', 'docs/交付报告.md'),
     ('tests/core.test.mjs', 'tests/core.test.mjs'),
 ]

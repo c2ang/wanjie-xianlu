@@ -96,7 +96,7 @@ node tools/install.mjs "D:/sillytavern"  # 或指到你的目录
 
 ## 给制卡器的调用方法
 
-> 完整规范：[`docs/制卡器调用规范.md`](docs/制卡器调用规范.md) · 可直粘的提示词：[`docs/制卡器提示词.md`](docs/制卡器提示词.md) · 机器可读契约：[`schemas/`](schemas)
+> 完整规范：[`docs/制卡器调用规范.md`](docs/制卡器调用规范.md) · 可直粘的提示词：[`docs/制卡器提示词.md`](docs/制卡器提示词.md) · 机器可读契约：[`schemas/`](schemas) · 写好的示例卡：[`docs/示例人物卡.json`](docs/示例人物卡.json)
 
 ### 一句话流程
 
@@ -229,7 +229,7 @@ plugin/      SillyTavern 扩展本体（单入口经典脚本，IndexedDB 存储
 knowledge/   资料包：原文 JSONL、四类实体、关联、素材池、报告
 tools/       资料构建、校验、打包、安装、离线 CLI
 schemas/     5 个 Function Tool 的 OpenAI 格式定义与返回 Schema
-docs/        制卡器调用规范、提示词、效果样例、交付报告
+docs/        制卡器调用规范、提示词、效果样例、示例人物卡、交付报告
 tests/       单元测试（20 项）
 ```
 
