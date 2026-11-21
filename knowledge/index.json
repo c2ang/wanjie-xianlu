@@ -1,0 +1,23 @@
+{
+  "name": "万界仙录·基础资料包",
+  "version": "1.2.0",
+  "generated_at": "2026-11-21",
+  "documents": "documents/source_documents.jsonl",
+  "entities": [
+    "entities/female_cultivators.jsonl",
+    "entities/female_deities.jsonl",
+    "entities/artifact_spirits.jsonl",
+    "entities/female_beasts.jsonl"
+  ],
+  "relations": "relations/relations.jsonl",
+  "pools": "indexes/surface_pools.json",
+  "counts": {
+    "documents": 1396,
+    "entities": 252,
+    "relations": 318,
+    "female_cultivator": 21,
+    "female_deity": 6,
+    "female_artifact_spirit": 86,
+    "female_beast": 139
+  }
+}

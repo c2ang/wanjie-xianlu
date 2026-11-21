@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "xianlu_payload",
+  "type": "object",
+  "required": [
+    "success",
+    "count",
+    "results",
+    "warnings"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "description": "是否有结果。false 时看 warnings"
+    },
+    "count": {
+      "type": "integer",
+      "description": "results 的条数"
+    },
+    "detail_level": {
+      "type": "string",
+      "enum": [
+        "compact",
+        "standard",
+        "complete"
+      ]
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/entity_result"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "需要转述给用户的提示（候选不足、已放宽条件等）"
+    },
+    "meta": {
+      "type": "object",
+      "description": "抽取/检索的附加信息，结构随工具不同"
+    }
+  },
+  "definitions": {
+    "entity_result": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "category",
+        "summary",
+        "quality"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "素材 ID，后续 lookup / related / save 用它"
+        },
+        "name": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "female_cultivator",
+            "female_deity",
+            "female_artifact_spirit",
+            "female_beast"
+          ]
+        },
+        "category_label": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "quality": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "inferred",
+            "adapted",
+            "pending",
+            "conflict"
+          ]
+        },
+        "quality_label": {
+          "type": "string"
+        },
+        "adaptation_flag": {
+          "type": "boolean",
+          "description": "true=含改编成分，不得当作原文事实引用"
+        },
+        "gender_basis": {
+          "type": "string",
+          "description": "女性身份的资料依据；为空表示需由模型补全"
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "facts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "中文标签 → 值，键名见 xianlu-enums.json 的 field_labels"
+        },
+        "background": {
+          "type": "object",
+          "description": "背景骨架：直接可用的门面资料（门派/境界/灵根/功法 等），不是一个人物",
+          "properties": {
+            "fields": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "中文标签 → 值"
+            },
+            "provenance": {
+              "type": "object",
+              "description": "每个字段的出处（entity / library / 原文 doc id）"
+            },
+            "created_by": {
+              "type": "string"
+            },
+            "to_be_authored": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "必须由模型补全的部分（姓名/性格/经历…）"
+            },
+            "pools_ready": {
+              "type": "boolean",
+              "description": "资料包的池子是否已导入；false 时只有境界"
+            },
+            "note": {
+              "type": "string",
+              "description": "给模型看的诚实标注"
+            }
+          },
+          "required": [
+            "fields"
+          ]
+        },
+        "material_note": {
+          "type": "string",
+          "description": "器灵素材说明：只给法宝名与形制，女性形态由模型补全"
+        },
+        "content": {
+          "type": "string",
+          "description": "仅 detail_level=complete 时返回的原文摘录"
+        },
+        "relation_type": {
+          "type": "string",
+          "description": "仅 related 返回时存在"
+        },
+        "relation_description": {
+          "type": "string"
+        }
+      }
+    },
+    "doc_hit": {
+      "type": "object",
+      "description": "scope=document 时的原文片段",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "source_path": {
+          "type": "string"
+        },
+        "snippet": {
+          "type": "string"
+        },
+        "score": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

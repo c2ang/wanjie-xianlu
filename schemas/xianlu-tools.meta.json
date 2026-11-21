@@ -1,0 +1,27 @@
+[
+  {
+    "name": "xianlu_search",
+    "displayName": "万界仙录·检索",
+    "description": "在本地修仙资料库中检索素材。scope=entity（默认）按条件检索四类角色素材；scope=document 检索资料库原文片段，用于查找「器灵怎么诞生」「金丹期有什么特点」这类设定规则；scope=auto 先查实体，实体不足时自动附带原文片段。返回的是资料库中既有内容及出处，不是创作结果。"
+  },
+  {
+    "name": "xianlu_generate",
+    "displayName": "万界仙录·抽取",
+    "description": "从本地修仙资料库中随机抽取角色素材（女修/神佛/器灵/异兽）。适合“随机生成一位元婴期女修”“抽一只可化形的上古异兽”这类需求。返回素材要点，角色描写由你完成。器灵类素材常常只给法宝名与形制（material_note 会注明），其女子形态、样貌、性格由你自行补全。"
+  },
+  {
+    "name": "xianlu_lookup",
+    "displayName": "万界仙录·详情",
+    "description": "按实体 ID 或名称查看完整资料。当用户想深入了解某个已检索到的角色、法宝、器灵或异兽时调用。"
+  },
+  {
+    "name": "xianlu_related",
+    "displayName": "万界仙录·关联",
+    "description": "查询实体的关联对象，例如某器灵所属法宝、某女修的宗门、某异兽的血脉来源、某神佛的道场与法宝。"
+  },
+  {
+    "name": "xianlu_save_result",
+    "displayName": "万界仙录·收藏",
+    "description": "把用户确认的抽取结果保存到插件的收藏区（不会修改人物卡或原始资料）。"
+  }
+]

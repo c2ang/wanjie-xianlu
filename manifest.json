@@ -1,0 +1,12 @@
+{
+    "display_name": "万界仙录 (Wanjie Xianlu)",
+    "loading_order": 120,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "built for 修仙资料库",
+    "version": "1.2.0",
+    "homePage": "",
+    "auto_update": false
+}

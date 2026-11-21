@@ -1,0 +1,1986 @@
+{
+  "version": "1.2.0",
+  "generated_at": "2026-11-21",
+  "realms": [
+    "凡人",
+    "炼气",
+    "筑基",
+    "金丹",
+    "元婴",
+    "化神",
+    "炼虚",
+    "合体",
+    "大乘",
+    "渡劫",
+    "散仙",
+    "地仙",
+    "真仙",
+    "天仙",
+    "玄仙",
+    "金仙",
+    "太乙",
+    "大罗",
+    "道祖"
+  ],
+  "sects": [
+    {
+      "name": "天机阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_fd16bda643a0bb09"
+      ]
+    },
+    {
+      "name": "万宝阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_ef55b109b2ed8bae"
+      ]
+    },
+    {
+      "name": "昆仑派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_ddc1f07275926377"
+      ]
+    },
+    {
+      "name": "蜀山剑派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_ddc1f07275926377"
+      ]
+    },
+    {
+      "name": "通天教",
+      "kind": "教派",
+      "source_ids": [
+        "doc_ddc1f07275926377"
+      ]
+    },
+    {
+      "name": "大雷音寺",
+      "kind": "佛门",
+      "source_ids": [
+        "doc_a49b0e5b05709167"
+      ]
+    },
+    {
+      "name": "蓬莱阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_7cfdafe424153621"
+      ]
+    },
+    {
+      "name": "天工坊",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_da2473c067e081b4"
+      ]
+    },
+    {
+      "name": "血魔宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_ef55b109b2ed8bae"
+      ]
+    },
+    {
+      "name": "天剑宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_03ed95346a1509ff"
+      ]
+    },
+    {
+      "name": "少林寺",
+      "kind": "佛门",
+      "source_ids": [
+        "doc_38558e3c9bd7fbe9"
+      ]
+    },
+    {
+      "name": "万剑阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_da2473c067e081b4"
+      ]
+    },
+    {
+      "name": "珍宝阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_40b7a0b42caf3cb9"
+      ]
+    },
+    {
+      "name": "青云门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_b1a3af38e2be1bae"
+      ]
+    },
+    {
+      "name": "武当派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_38558e3c9bd7fbe9"
+      ]
+    },
+    {
+      "name": "轮回殿",
+      "kind": "殿阁",
+      "source_ids": [
+        "doc_56a217b01ade8fd6"
+      ]
+    },
+    {
+      "name": "天魔宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_1dbb6281e7ba3474"
+      ]
+    },
+    {
+      "name": "幽冥教",
+      "kind": "教派",
+      "source_ids": [
+        "doc_fb4cbb4a2b53fd7d"
+      ]
+    },
+    {
+      "name": "凌霄宝殿",
+      "kind": "殿阁",
+      "source_ids": [
+        "doc_e8a3e14c5d619649"
+      ]
+    },
+    {
+      "name": "青云宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_03ed95346a1509ff"
+      ]
+    },
+    {
+      "name": "万毒门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_2b218142612e2979"
+      ]
+    },
+    {
+      "name": "峨眉派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_7cfdafe424153621"
+      ]
+    },
+    {
+      "name": "正道联盟",
+      "kind": "联盟",
+      "source_ids": [
+        "doc_526c04ff3f17ed47"
+      ]
+    },
+    {
+      "name": "妖界联盟",
+      "kind": "联盟",
+      "source_ids": [
+        "doc_67026497736866d5"
+      ]
+    },
+    {
+      "name": "合欢宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_1dbb6281e7ba3474"
+      ]
+    },
+    {
+      "name": "万佛寺",
+      "kind": "佛门",
+      "source_ids": [
+        "doc_9244d693c09cad9e"
+      ]
+    },
+    {
+      "name": "鬼王宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_91b305db492c7500"
+      ]
+    },
+    {
+      "name": "阴阳宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_a153d688c31baccd"
+      ]
+    },
+    {
+      "name": "丹方阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_da2473c067e081b4"
+      ]
+    },
+    {
+      "name": "灵宝阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_95c734c681bcd1d1"
+      ]
+    },
+    {
+      "name": "天玄宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_b3e280e660751fc6"
+      ]
+    },
+    {
+      "name": "炼丹宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_d6a009e90596a207"
+      ]
+    },
+    {
+      "name": "南天门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_03ed95346a1509ff"
+      ]
+    },
+    {
+      "name": "妖族联盟",
+      "kind": "联盟",
+      "source_ids": [
+        "doc_8519850fb1d49814"
+      ]
+    },
+    {
+      "name": "太虚宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_b037d959353d33a2"
+      ]
+    },
+    {
+      "name": "天工宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_8d2b60900543ca43"
+      ]
+    },
+    {
+      "name": "冰魄宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_531fb7943c78dc65"
+      ]
+    },
+    {
+      "name": "白骨教",
+      "kind": "教派",
+      "source_ids": [
+        "doc_8bd03f31fdd2b784"
+      ]
+    },
+    {
+      "name": "修罗殿",
+      "kind": "殿阁",
+      "source_ids": [
+        "doc_91b305db492c7500"
+      ]
+    },
+    {
+      "name": "尸魂殿",
+      "kind": "殿阁",
+      "source_ids": [
+        "doc_91b305db492c7500"
+      ]
+    },
+    {
+      "name": "血魔教",
+      "kind": "教派",
+      "source_ids": [
+        "doc_86addd4b9dc72e44"
+      ]
+    },
+    {
+      "name": "血煞门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_5a41397798d49a38"
+      ]
+    },
+    {
+      "name": "雷音寺",
+      "kind": "佛门",
+      "source_ids": [
+        "doc_71a498d7f1aaa222"
+      ]
+    },
+    {
+      "name": "少林派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_779742d2e52608d2"
+      ]
+    },
+    {
+      "name": "天阵宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_3464ca3c14baeb8d"
+      ]
+    },
+    {
+      "name": "傀儡宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_d18a0783c637b7f2"
+      ]
+    },
+    {
+      "name": "净土宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_536fefcd510c3e05"
+      ]
+    },
+    {
+      "name": "五毒教",
+      "kind": "教派",
+      "source_ids": [
+        "doc_c9f3e6e749c43818"
+      ]
+    },
+    {
+      "name": "百草门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_c73104a1afc52a65"
+      ]
+    },
+    {
+      "name": "时间神殿",
+      "kind": "殿阁",
+      "source_ids": [
+        "doc_caefd20b99455fbe"
+      ]
+    },
+    {
+      "name": "天都坊",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_f6df9631760b3090"
+      ]
+    },
+    {
+      "name": "幽冥魔教",
+      "kind": "教派",
+      "source_ids": [
+        "doc_d6a2804a18a0abcd"
+      ]
+    },
+    {
+      "name": "逍遥派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_9824e9301d66ad17"
+      ]
+    },
+    {
+      "name": "铸剑山庄",
+      "kind": "世家",
+      "source_ids": [
+        "doc_abeb3bf70f4590f4"
+      ]
+    },
+    {
+      "name": "星辰阁",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_03ed95346a1509ff"
+      ]
+    },
+    {
+      "name": "玄天道宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_86addd4b9dc72e44"
+      ]
+    },
+    {
+      "name": "阴阳合欢宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_86f200b2eb5741c4"
+      ]
+    },
+    {
+      "name": "万剑宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_055471d1d6960f1a"
+      ]
+    },
+    {
+      "name": "归墟派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_4ea92eccf446aa9d"
+      ]
+    },
+    {
+      "name": "青城派",
+      "kind": "门派",
+      "source_ids": [
+        "doc_1b69385b49f45377"
+      ]
+    },
+    {
+      "name": "金刚门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_4e01154c6e494dc9"
+      ]
+    },
+    {
+      "name": "丹鼎宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_fd16bda643a0bb09"
+      ]
+    },
+    {
+      "name": "灵山佛门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_65f4e2c472930bc7"
+      ]
+    },
+    {
+      "name": "魔道六宗",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_af4eabafb62a8b22"
+      ]
+    },
+    {
+      "name": "佛门四寺",
+      "kind": "佛门",
+      "source_ids": [
+        "doc_a8eca1f4ec6abcfe"
+      ]
+    },
+    {
+      "name": "九大执事门",
+      "kind": "宗门",
+      "source_ids": [
+        "doc_9824e9301d66ad17"
+      ]
+    },
+    {
+      "name": "散修联盟",
+      "kind": "联盟",
+      "source_ids": [
+        "doc_ef55b109b2ed8bae"
+      ]
+    },
+    {
+      "name": "凡间商会",
+      "kind": "商盟",
+      "source_ids": [
+        "doc_53c48436c561f4d2"
+      ]
+    }
+  ],
+  "techniques": [
+    {
+      "name": "穿云刺月戟法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_a6b1bc06a54d41fc"
+      ]
+    },
+    {
+      "name": "穿云弓法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_013734ffc1852ab8"
+      ]
+    },
+    {
+      "name": "穿云破月枪法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_466e14540e98c19f"
+      ]
+    },
+    {
+      "name": "穿云弩法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_e9e10b6d843baa63"
+      ]
+    },
+    {
+      "name": "穿云戟法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_07638e1f1d09fdce"
+      ]
+    },
+    {
+      "name": "刺月剑法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_8497a205252f1f24"
+      ]
+    },
+    {
+      "name": "点穴杖法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_949fa0bc5c6a459f"
+      ]
+    },
+    {
+      "name": "点穴指法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_0eb2df883cf0a72c"
+      ]
+    },
+    {
+      "name": "翻山铲法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_6b16589e73baad0b"
+      ]
+    },
+    {
+      "name": "飞刀法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_1f5301c3e0bb5f54"
+      ]
+    },
+    {
+      "name": "飞镖法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_bae30a797e7ac0ec"
+      ]
+    },
+    {
+      "name": "割风断影镰法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_0192d4613bec8cb1"
+      ]
+    },
+    {
+      "name": "割风镰法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_9e42d0a7bf732aa4"
+      ]
+    },
+    {
+      "name": "横扫棍法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_18308d73e6a0fd5e"
+      ]
+    },
+    {
+      "name": "横扫千军棍法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_fb2424a63016aecf"
+      ]
+    },
+    {
+      "name": "降龙十八掌",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_773097b158558883"
+      ]
+    },
+    {
+      "name": "九阳神功",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_42cdef146efb3e87"
+      ]
+    },
+    {
+      "name": "开山耙法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_3b4149e111226cf7"
+      ]
+    },
+    {
+      "name": "开山裂石斧法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_92e3ef320b0a4533"
+      ]
+    },
+    {
+      "name": "开山拳法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_ae342b565094a31e"
+      ]
+    },
+    {
+      "name": "裂地叉法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_32caf26da2cc081f"
+      ]
+    },
+    {
+      "name": "裂地断石剑法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_420457cd3e8b1e73"
+      ]
+    },
+    {
+      "name": "灵蛇软鞭法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_1f3665b8e89af437"
+      ]
+    },
+    {
+      "name": "流星锤法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_e3308abd9af4ff4b"
+      ]
+    },
+    {
+      "name": "盘古开天诀",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_bea7b2c9f8975a58"
+      ]
+    },
+    {
+      "name": "劈山裂地掌法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_ea2b553a6928780c"
+      ]
+    },
+    {
+      "name": "劈山掌法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_4d61d492661f8f8a"
+      ]
+    },
+    {
+      "name": "破甲穿石锏法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_5717b92d9b49dfc1"
+      ]
+    },
+    {
+      "name": "破甲锏法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_f3e70c56bc728cb0"
+      ]
+    },
+    {
+      "name": "破石斧法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_e96b3521db4a81e6"
+      ]
+    },
+    {
+      "name": "扫堂腿法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_0355403958ae02ca"
+      ]
+    },
+    {
+      "name": "突刺枪法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_04c46a0e8f2ff730"
+      ]
+    },
+    {
+      "name": "斩铁刀法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_990f52732a8a4207"
+      ]
+    },
+    {
+      "name": "震山锤法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_ae1b654dd6993837"
+      ]
+    },
+    {
+      "name": "震山撼地锤法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_ec50ece00f05e68c"
+      ]
+    },
+    {
+      "name": "重锤双锤法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_c5edd408eea82d6b"
+      ]
+    },
+    {
+      "name": "追风鞭法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_1a6de9e1dbe98d6c"
+      ]
+    },
+    {
+      "name": "追风逐电鞭法",
+      "school": "攻击类",
+      "source_ids": [
+        "doc_65bafc322520b922"
+      ]
+    },
+    {
+      "name": "金刚不坏神功",
+      "school": "防御类",
+      "source_ids": [
+        "doc_7221b2994aa274a7"
+      ]
+    },
+    {
+      "name": "金刚护体功",
+      "school": "",
+      "source_ids": [
+        "doc_82d6033c2704fe45"
+      ]
+    },
+    {
+      "name": "灵气护盾术",
+      "school": "防御类",
+      "source_ids": [
+        "doc_852681f04f8636e2"
+      ]
+    },
+    {
+      "name": "回春术",
+      "school": "",
+      "source_ids": [
+        "doc_0b766b10b6c29662"
+      ]
+    },
+    {
+      "name": "聚气增益术",
+      "school": "",
+      "source_ids": [
+        "doc_c18ff456396ec6e7"
+      ]
+    },
+    {
+      "name": "灵泉术",
+      "school": "辅助类",
+      "source_ids": [
+        "doc_17e347dff2c271bb"
+      ]
+    },
+    {
+      "name": "起死回生术",
+      "school": "辅助类",
+      "source_ids": [
+        "doc_ffeed70bfb3f0a00"
+      ]
+    },
+    {
+      "name": "水遁术",
+      "school": "",
+      "source_ids": [
+        "doc_6d9ea38fadebd82f"
+      ]
+    },
+    {
+      "name": "土遁术",
+      "school": "",
+      "source_ids": [
+        "doc_c3a83fc5d5de3ab9"
+      ]
+    },
+    {
+      "name": "迷魂术",
+      "school": "",
+      "source_ids": [
+        "doc_3d7f17ddb714bb99"
+      ]
+    },
+    {
+      "name": "聚火诀",
+      "school": "",
+      "source_ids": [
+        "doc_edd325e4001b0e87"
+      ]
+    },
+    {
+      "name": "灵香引气诀",
+      "school": "",
+      "source_ids": [
+        "doc_cebfb0a3ae5b9c0c"
+      ]
+    },
+    {
+      "name": "寒冰剑诀",
+      "school": "剑修",
+      "source_ids": [
+        "doc_deb39957d708f0d5"
+      ]
+    },
+    {
+      "name": "惊雷剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_5cc3d4b85137b83f"
+      ]
+    },
+    {
+      "name": "狂风剑诀",
+      "school": "剑修",
+      "source_ids": [
+        "doc_8c4e0f66402d16c6"
+      ]
+    },
+    {
+      "name": "雷霆剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_969ff8ab11ba25c9"
+      ]
+    },
+    {
+      "name": "裂空剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_8437a4f29168b1ec"
+      ]
+    },
+    {
+      "name": "流云剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_9dfe473c0c24e015"
+      ]
+    },
+    {
+      "name": "破风剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_58231706ed98db4d"
+      ]
+    },
+    {
+      "name": "轻风剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_92f918df5b7589d0"
+      ]
+    },
+    {
+      "name": "太极剑诀",
+      "school": "剑修",
+      "source_ids": [
+        "doc_bf4307e6da664986"
+      ]
+    },
+    {
+      "name": "天剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_0c7bd45e5b889454"
+      ]
+    },
+    {
+      "name": "无极剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_d779fc995ccd6064"
+      ]
+    },
+    {
+      "name": "养气剑诀",
+      "school": "剑修",
+      "source_ids": [
+        "doc_d7cff27fcdce9861"
+      ]
+    },
+    {
+      "name": "追星剑诀",
+      "school": "",
+      "source_ids": [
+        "doc_8d31afb00460a047"
+      ]
+    },
+    {
+      "name": "大道拳",
+      "school": "",
+      "source_ids": [
+        "doc_d2b3133dcfe69adf"
+      ]
+    },
+    {
+      "name": "地裂掌",
+      "school": "",
+      "source_ids": [
+        "doc_49fb0c75dd230ecc"
+      ]
+    },
+    {
+      "name": "归一掌",
+      "school": "",
+      "source_ids": [
+        "doc_090073340072c68a"
+      ]
+    },
+    {
+      "name": "寒冰掌",
+      "school": "",
+      "source_ids": [
+        "doc_298fc36bccbc40f1"
+      ]
+    },
+    {
+      "name": "混沌拳",
+      "school": "",
+      "source_ids": [
+        "doc_91623e4b557fdc15"
+      ]
+    },
+    {
+      "name": "金刚拳",
+      "school": "",
+      "source_ids": [
+        "doc_1792270fa97c761f"
+      ]
+    },
+    {
+      "name": "开山拳",
+      "school": "",
+      "source_ids": [
+        "doc_7f6946e200e94117"
+      ]
+    },
+    {
+      "name": "雷霆腿",
+      "school": "",
+      "source_ids": [
+        "doc_5eb8a9b644c9df1b"
+      ]
+    },
+    {
+      "name": "裂天拳",
+      "school": "体修",
+      "source_ids": [
+        "doc_7337caaafc19629a"
+      ]
+    },
+    {
+      "name": "烈火掌",
+      "school": "",
+      "source_ids": [
+        "doc_1b636ff92a659a3a"
+      ]
+    },
+    {
+      "name": "轮回掌",
+      "school": "",
+      "source_ids": [
+        "doc_7701a539e4514d01"
+      ]
+    },
+    {
+      "name": "灭世拳",
+      "school": "",
+      "source_ids": [
+        "doc_c83f012afd380eaf"
+      ]
+    },
+    {
+      "name": "破石腿",
+      "school": "",
+      "source_ids": [
+        "doc_56c078c5493717b3"
+      ]
+    },
+    {
+      "name": "天崩腿",
+      "school": "",
+      "source_ids": [
+        "doc_47c72a51143c6dd1"
+      ]
+    },
+    {
+      "name": "天罚腿",
+      "school": "",
+      "source_ids": [
+        "doc_c42a5a372a2aae13"
+      ]
+    },
+    {
+      "name": "虚无腿",
+      "school": "",
+      "source_ids": [
+        "doc_ac29b6a244a49250"
+      ]
+    },
+    {
+      "name": "永恒腿",
+      "school": "",
+      "source_ids": [
+        "doc_4a49f9ebaacd65fe"
+      ]
+    },
+    {
+      "name": "造化掌",
+      "school": "",
+      "source_ids": [
+        "doc_a8e8ac966ad437bc"
+      ]
+    },
+    {
+      "name": "封印法术",
+      "school": "",
+      "source_ids": [
+        "doc_5b383894ae37bfac"
+      ]
+    },
+    {
+      "name": "元素法术",
+      "school": "",
+      "source_ids": [
+        "doc_9ab89b056322c3eb"
+      ]
+    },
+    {
+      "name": "召唤法术",
+      "school": "",
+      "source_ids": [
+        "doc_2ca32159c73da326"
+      ]
+    },
+    {
+      "name": "金刚护体功",
+      "school": "",
+      "source_ids": [
+        "doc_b825b26486dceb8b"
+      ]
+    },
+    {
+      "name": "彻地神通",
+      "school": "",
+      "source_ids": [
+        "doc_a3a92fe8a8edf740"
+      ]
+    },
+    {
+      "name": "大道神通",
+      "school": "",
+      "source_ids": [
+        "doc_cec25788a2cde24c"
+      ]
+    },
+    {
+      "name": "法则神通",
+      "school": "",
+      "source_ids": [
+        "doc_b370e6d56448b1c9"
+      ]
+    },
+    {
+      "name": "混沌神通",
+      "school": "",
+      "source_ids": [
+        "doc_b868aedcc8044a42"
+      ]
+    },
+    {
+      "name": "空间神通",
+      "school": "",
+      "source_ids": [
+        "doc_06aba9636ec7fd32"
+      ]
+    },
+    {
+      "name": "轮回神通",
+      "school": "",
+      "source_ids": [
+        "doc_430b05560e2808de"
+      ]
+    },
+    {
+      "name": "命运神通",
+      "school": "",
+      "source_ids": [
+        "doc_e6684b1217070042"
+      ]
+    },
+    {
+      "name": "时间神通",
+      "school": "",
+      "source_ids": [
+        "doc_9deca85f536241b3"
+      ]
+    },
+    {
+      "name": "宿命神通",
+      "school": "",
+      "source_ids": [
+        "doc_5af095b6f32c1d89"
+      ]
+    },
+    {
+      "name": "他心神通",
+      "school": "",
+      "source_ids": [
+        "doc_cfe240c9c0ac7988"
+      ]
+    },
+    {
+      "name": "天眼神通",
+      "school": "",
+      "source_ids": [
+        "doc_d41bb09c66bf3d48"
+      ]
+    },
+    {
+      "name": "通天神通",
+      "school": "",
+      "source_ids": [
+        "doc_4a2a082c8d20b4bf"
+      ]
+    },
+    {
+      "name": "虚空神通",
+      "school": "道修",
+      "source_ids": [
+        "doc_625c21b6e5f44b87"
+      ]
+    },
+    {
+      "name": "因果神通",
+      "school": "",
+      "source_ids": [
+        "doc_076c919c855bd590"
+      ]
+    },
+    {
+      "name": "造化神通",
+      "school": "",
+      "source_ids": [
+        "doc_bdebb0038cc18355"
+      ]
+    },
+    {
+      "name": "道心通明诀",
+      "school": "",
+      "source_ids": [
+        "doc_7c4d3d088835b698"
+      ]
+    },
+    {
+      "name": "道心种魔诀",
+      "school": "",
+      "source_ids": [
+        "doc_7931316202d64856"
+      ]
+    },
+    {
+      "name": "固魂术",
+      "school": "",
+      "source_ids": [
+        "doc_1ba467ab50da83a5"
+      ]
+    },
+    {
+      "name": "静心诀",
+      "school": "",
+      "source_ids": [
+        "doc_11291df3aecbeeec"
+      ]
+    },
+    {
+      "name": "凝神诀",
+      "school": "",
+      "source_ids": [
+        "doc_8d2b60900543ca43"
+      ]
+    },
+    {
+      "name": "太上忘情诀",
+      "school": "",
+      "source_ids": [
+        "doc_1f938d3c2efceaca"
+      ]
+    },
+    {
+      "name": "天人合一诀",
+      "school": "",
+      "source_ids": [
+        "doc_0186adc040a7ca60"
+      ]
+    },
+    {
+      "name": "万道归心诀",
+      "school": "",
+      "source_ids": [
+        "doc_ccbcc51eaf230944"
+      ]
+    },
+    {
+      "name": "心如止水诀",
+      "school": "",
+      "source_ids": [
+        "doc_e9817b9b6a9205b4"
+      ]
+    },
+    {
+      "name": "轻身术",
+      "school": "",
+      "source_ids": [
+        "doc_d476d3678bf11a55"
+      ]
+    },
+    {
+      "name": "创世禁术",
+      "school": "",
+      "source_ids": [
+        "doc_a5c7f5cc50c98127"
+      ]
+    },
+    {
+      "name": "归墟禁术",
+      "school": "",
+      "source_ids": [
+        "doc_1b940151a54f35d4"
+      ]
+    },
+    {
+      "name": "化魂术",
+      "school": "魔修",
+      "source_ids": [
+        "doc_71b6d3501316ab7f"
+      ]
+    },
+    {
+      "name": "混沌禁术",
+      "school": "",
+      "source_ids": [
+        "doc_ef6ad85680056cf1"
+      ]
+    },
+    {
+      "name": "轮回禁术",
+      "school": "",
+      "source_ids": [
+        "doc_8dea47861d155f0f"
+      ]
+    },
+    {
+      "name": "灭道术",
+      "school": "",
+      "source_ids": [
+        "doc_8698b2ce96bdb233"
+      ]
+    },
+    {
+      "name": "灭魂术",
+      "school": "",
+      "source_ids": [
+        "doc_ada841554275303a"
+      ]
+    },
+    {
+      "name": "灭世禁术",
+      "school": "",
+      "source_ids": [
+        "doc_209d842ee038be86"
+      ]
+    },
+    {
+      "name": "魔化术",
+      "school": "魔修",
+      "source_ids": [
+        "doc_e9b0f981be52d179"
+      ]
+    },
+    {
+      "name": "燃道术",
+      "school": "",
+      "source_ids": [
+        "doc_9376eadadb3841ce"
+      ]
+    },
+    {
+      "name": "燃魂术",
+      "school": "",
+      "source_ids": [
+        "doc_e2e5e0fc65f8c882"
+      ]
+    },
+    {
+      "name": "燃血术",
+      "school": "",
+      "source_ids": [
+        "doc_bc0cfa0049af04a5"
+      ]
+    },
+    {
+      "name": "噬魂术",
+      "school": "",
+      "source_ids": [
+        "doc_d9d69607e167299d"
+      ]
+    },
+    {
+      "name": "噬灵术",
+      "school": "",
+      "source_ids": [
+        "doc_8e5f65c07b402193"
+      ]
+    },
+    {
+      "name": "噬神术",
+      "school": "",
+      "source_ids": [
+        "doc_e937a6e77551a614"
+      ]
+    },
+    {
+      "name": "噬圣术",
+      "school": "",
+      "source_ids": [
+        "doc_85d405958d46e29d"
+      ]
+    },
+    {
+      "name": "噬天术",
+      "school": "",
+      "source_ids": [
+        "doc_4c829a39e92d5e65"
+      ]
+    },
+    {
+      "name": "天道禁术",
+      "school": "",
+      "source_ids": [
+        "doc_45d87ed21057be8f"
+      ]
+    },
+    {
+      "name": "屠天术",
+      "school": "",
+      "source_ids": [
+        "doc_9073344727f61828"
+      ]
+    },
+    {
+      "name": "虚无禁术",
+      "school": "",
+      "source_ids": [
+        "doc_d191340a3ca03b40"
+      ]
+    },
+    {
+      "name": "血遁术",
+      "school": "",
+      "source_ids": [
+        "doc_69bd94d023e3252e"
+      ]
+    },
+    {
+      "name": "血河大法",
+      "school": "魔修",
+      "source_ids": [
+        "doc_5d01245a9db5b201"
+      ]
+    },
+    {
+      "name": "血祭术",
+      "school": "",
+      "source_ids": [
+        "doc_3e8e4b0e491eb18d"
+      ]
+    },
+    {
+      "name": "血神经",
+      "school": "",
+      "source_ids": [
+        "doc_9957fed533aa4aff"
+      ]
+    },
+    {
+      "name": "永恒禁术",
+      "school": "",
+      "source_ids": [
+        "doc_c911a3277d5a4475"
+      ]
+    },
+    {
+      "name": "八卦起始诀",
+      "school": "",
+      "source_ids": [
+        "doc_4ef815a00e65b22a"
+      ]
+    },
+    {
+      "name": "成仙诀",
+      "school": "",
+      "source_ids": [
+        "doc_7b2a4bf61b755c79"
+      ]
+    },
+    {
+      "name": "大乘真经",
+      "school": "",
+      "source_ids": [
+        "doc_855908eafe1c474c"
+      ]
+    },
+    {
+      "name": "大周天诀",
+      "school": "",
+      "source_ids": [
+        "doc_05278bf43620255a"
+      ]
+    },
+    {
+      "name": "渡劫飞升诀",
+      "school": "",
+      "source_ids": [
+        "doc_69dfd0b6f1204d1a"
+      ]
+    },
+    {
+      "name": "合体归元功",
+      "school": "",
+      "source_ids": [
+        "doc_feff110eb64ebb39"
+      ]
+    },
+    {
+      "name": "金丹结成诀",
+      "school": "",
+      "source_ids": [
+        "doc_4ab5a7e80375e527"
+      ]
+    },
+    {
+      "name": "聚气诀",
+      "school": "",
+      "source_ids": [
+        "doc_ff4dfdad26362980"
+      ]
+    },
+    {
+      "name": "炼虚合道诀",
+      "school": "",
+      "source_ids": [
+        "doc_7f0b17b77750ffa9"
+      ]
+    },
+    {
+      "name": "灵气引导术",
+      "school": "",
+      "source_ids": [
+        "doc_defb763480fa029c"
+      ]
+    },
+    {
+      "name": "三花聚顶神功",
+      "school": "",
+      "source_ids": [
+        "doc_9661d5ca126b24a0"
+      ]
+    },
+    {
+      "name": "天道归元功",
+      "school": "",
+      "source_ids": [
+        "doc_0cd7b4e133c99916"
+      ]
+    },
+    {
+      "name": "五气朝元大法",
+      "school": "",
+      "source_ids": [
+        "doc_6090c70beaf2d9d3"
+      ]
+    },
+    {
+      "name": "五气朝元功",
+      "school": "",
+      "source_ids": [
+        "doc_731edacdec6e4ff6"
+      ]
+    },
+    {
+      "name": "五行基础功",
+      "school": "",
+      "source_ids": [
+        "doc_9239512e067e6678"
+      ]
+    },
+    {
+      "name": "五行圆满诀",
+      "school": "",
+      "source_ids": [
+        "doc_ef731540b7aa60b0"
+      ]
+    },
+    {
+      "name": "小周天诀",
+      "school": "",
+      "source_ids": [
+        "doc_172899f27ca9f4a0"
+      ]
+    },
+    {
+      "name": "分身术与化身术",
+      "school": "",
+      "source_ids": [
+        "doc_8406f9378fd7850f"
+      ]
+    },
+    {
+      "name": "傀儡术与机关术",
+      "school": "",
+      "source_ids": [
+        "doc_d18a0783c637b7f2"
+      ]
+    },
+    {
+      "name": "血祭与血炼之术",
+      "school": "道修",
+      "source_ids": [
+        "doc_29f3098d45522dcf"
+      ]
+    },
+    {
+      "name": "诅咒之术与巫蛊术",
+      "school": "道修",
+      "source_ids": [
+        "doc_ed91e3fa4b4ed509"
+      ]
+    }
+  ],
+  "spirit_roots": [
+    {
+      "name": "天灵根",
+      "tier": "天灵根",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "变异灵根",
+      "tier": "变异灵根",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "单灵根",
+      "tier": "单灵根",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "双灵根",
+      "tier": "双灵根",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "三灵根",
+      "tier": "三灵根",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "四灵根",
+      "tier": "四灵根",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "五灵根",
+      "tier": "五灵根",
+      "source_ids": [
+        "doc_b8f571d8a7d350d3"
+      ]
+    },
+    {
+      "name": "杂灵根",
+      "tier": "杂灵根",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "混沌灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "变异雷灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "变异风灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "变异冰灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "金灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "木灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "水灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "火灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "土灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "雷灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "风灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "冰灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "暗灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "光灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_f8f2cc1346b85110"
+      ]
+    },
+    {
+      "name": "隐雷灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_203a2a219927c452"
+      ]
+    },
+    {
+      "name": "隐暗灵根",
+      "tier": "",
+      "source_ids": [
+        "doc_203a2a219927c452"
+      ]
+    }
+  ],
+  "identities": [
+    {
+      "name": "外门弟子",
+      "role": "外门弟子",
+      "entity_id": "",
+      "source_ids": [
+        "doc_d6a009e90596a207",
+        "doc_6343424db0944a21",
+        "doc_7c4b8c2fd6398128"
+      ]
+    },
+    {
+      "name": "内门弟子",
+      "role": "内门弟子",
+      "entity_id": "",
+      "source_ids": [
+        "doc_6343424db0944a21",
+        "doc_7c4b8c2fd6398128",
+        "doc_3750ba51c2c05de5"
+      ]
+    },
+    {
+      "name": "亲传弟子",
+      "role": "亲传弟子",
+      "entity_id": "",
+      "source_ids": [
+        "doc_4e01154c6e494dc9",
+        "doc_68b16e6b538b050c",
+        "doc_dbaa352bc7cd5ef6"
+      ]
+    },
+    {
+      "name": "真传弟子",
+      "role": "真传弟子",
+      "entity_id": "",
+      "source_ids": [
+        "doc_b8f571d8a7d350d3",
+        "doc_78cfecf150705ff8",
+        "doc_4e01154c6e494dc9"
+      ]
+    },
+    {
+      "name": "宗门长老",
+      "role": "宗门长老",
+      "entity_id": "",
+      "source_ids": [
+        "doc_6343424db0944a21",
+        "doc_98cdb9aa5d4475a0",
+        "doc_f6d5799442274a1a"
+      ]
+    },
+    {
+      "name": "峰主",
+      "role": "峰主",
+      "entity_id": "",
+      "source_ids": [
+        "doc_7cfdafe424153621",
+        "doc_4e01154c6e494dc9",
+        "doc_dbaa352bc7cd5ef6"
+      ]
+    },
+    {
+      "name": "宗主",
+      "role": "宗主",
+      "entity_id": "",
+      "source_ids": [
+        "doc_5c317a8167906ff1",
+        "doc_ef55b109b2ed8bae",
+        "doc_86addd4b9dc72e44"
+      ]
+    },
+    {
+      "name": "掌门",
+      "role": "掌门",
+      "entity_id": "",
+      "source_ids": [
+        "doc_d6a009e90596a207",
+        "doc_718e83775286e0b9",
+        "doc_8519850fb1d49814"
+      ]
+    },
+    {
+      "name": "圣女",
+      "role": "圣女",
+      "entity_id": "",
+      "source_ids": [
+        "doc_b8f571d8a7d350d3",
+        "doc_5348d92963b36cfc",
+        "doc_cf05579dd67648d2"
+      ]
+    },
+    {
+      "name": "仙子",
+      "role": "仙子",
+      "entity_id": "",
+      "source_ids": [
+        "doc_e8a3e14c5d619649",
+        "doc_7cfdafe424153621",
+        "doc_658874adcb91eebb"
+      ]
+    },
+    {
+      "name": "散修",
+      "role": "散修",
+      "entity_id": "",
+      "source_ids": [
+        "doc_7c094620728cf74b",
+        "doc_b3e280e660751fc6",
+        "doc_19e3f938bd3fc78f"
+      ]
+    },
+    {
+      "name": "魔修",
+      "role": "魔修",
+      "entity_id": "",
+      "source_ids": [
+        "doc_a026aee00275742e",
+        "doc_56a217b01ade8fd6",
+        "doc_d806ff96cadbac1a"
+      ]
+    },
+    {
+      "name": "妖修",
+      "role": "妖修",
+      "entity_id": "",
+      "source_ids": [
+        "doc_f1d8100da96438a7",
+        "doc_9e8a8714fdfc5572",
+        "doc_4ad815a1b4abc1e4"
+      ]
+    },
+    {
+      "name": "女帝",
+      "role": "女帝",
+      "entity_id": "",
+      "source_ids": [
+        "doc_3d52367a6416033d",
+        "doc_3a21b5a1bc394a78",
+        "doc_0342ff5870636900"
+      ]
+    },
+    {
+      "name": "公主",
+      "role": "公主",
+      "entity_id": "",
+      "source_ids": [
+        "doc_5348d92963b36cfc",
+        "doc_1b73454e89c6d1d3",
+        "doc_d61577dc7ee3e109"
+      ]
+    },
+    {
+      "name": "师姐",
+      "role": "师姐",
+      "entity_id": "",
+      "source_ids": [
+        "doc_5c317a8167906ff1",
+        "doc_718e83775286e0b9",
+        "doc_3a21b5a1bc394a78"
+      ]
+    },
+    {
+      "name": "师妹",
+      "role": "师妹",
+      "entity_id": "",
+      "source_ids": [
+        "doc_5c317a8167906ff1",
+        "doc_3a21b5a1bc394a78",
+        "doc_1db3a5c62809fc8f"
+      ]
+    },
+    {
+      "name": "道侣",
+      "role": "道侣",
+      "entity_id": "",
+      "source_ids": [
+        "doc_43d92fef505e25f5",
+        "doc_718e83775286e0b9",
+        "doc_5ea5950555feed2c"
+      ]
+    },
+    {
+      "name": "红颜知己",
+      "role": "红颜知己",
+      "entity_id": "",
+      "source_ids": [
+        "doc_6a3aa80df1d51f1d",
+        "doc_3a21b5a1bc394a78",
+        "doc_689c9a6d7d141964"
+      ]
+    },
+    {
+      "name": "妖王",
+      "role": "妖王",
+      "entity_id": "",
+      "source_ids": [
+        "doc_56a217b01ade8fd6",
+        "doc_d806ff96cadbac1a",
+        "doc_4ad815a1b4abc1e4"
+      ]
+    },
+    {
+      "name": "丹修",
+      "role": "丹修",
+      "entity_id": "",
+      "source_ids": [
+        "doc_b3e280e660751fc6",
+        "doc_d6a009e90596a207",
+        "doc_8dca737eeb60531e"
+      ]
+    }
+  ],
+  "counts": {
+    "sects": 68,
+    "techniques": 156,
+    "spirit_roots": 24,
+    "identities": 21,
+    "realms": 19
+  }
+}

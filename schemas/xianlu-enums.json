@@ -1,0 +1,319 @@
+{
+  "generated_at": "2026-11-21T11:26:45.480Z",
+  "categories": {
+    "female_cultivator": {
+      "label": "女性修仙者",
+      "short": "女修",
+      "prefix": "cult",
+      "fields": [
+        [
+          "gender_basis",
+          "女性依据"
+        ],
+        [
+          "race",
+          "种族"
+        ],
+        [
+          "realm",
+          "境界"
+        ],
+        [
+          "spirit_root",
+          "灵根"
+        ],
+        [
+          "constitution",
+          "特殊体质"
+        ],
+        [
+          "bloodline",
+          "血脉"
+        ],
+        [
+          "cultivation_path",
+          "修炼方向"
+        ],
+        [
+          "techniques",
+          "功法法术"
+        ],
+        [
+          "sect",
+          "宗门"
+        ],
+        [
+          "faction",
+          "所属势力"
+        ],
+        [
+          "origin",
+          "出身来历"
+        ],
+        [
+          "personality",
+          "性格"
+        ],
+        [
+          "motivation",
+          "目标动机"
+        ],
+        [
+          "appearance",
+          "外貌"
+        ],
+        [
+          "relationships",
+          "人物关系"
+        ]
+      ],
+      "filters": [
+        "realm",
+        "race",
+        "spirit_root",
+        "constitution",
+        "bloodline",
+        "sect",
+        "faction"
+      ]
+    },
+    "female_deity": {
+      "label": "女性神佛",
+      "short": "神佛",
+      "prefix": "deity",
+      "fields": [
+        [
+          "gender_basis",
+          "女性依据"
+        ],
+        [
+          "divine_rank",
+          "神位神格"
+        ],
+        [
+          "buddhist_rank",
+          "佛门果位"
+        ],
+        [
+          "title",
+          "尊号"
+        ],
+        [
+          "domain",
+          "神职领域"
+        ],
+        [
+          "vows",
+          "誓愿"
+        ],
+        [
+          "karma",
+          "因果"
+        ],
+        [
+          "faith",
+          "信仰体系"
+        ],
+        [
+          "realm",
+          "所在神域"
+        ],
+        [
+          "daoist_site",
+          "道场"
+        ],
+        [
+          "manifestations",
+          "化身显现"
+        ],
+        [
+          "artifacts",
+          "关联法宝"
+        ],
+        [
+          "source_evidence",
+          "原文依据"
+        ]
+      ],
+      "filters": [
+        "divine_rank",
+        "buddhist_rank",
+        "domain",
+        "faith",
+        "realm",
+        "daoist_site"
+      ]
+    },
+    "female_artifact_spirit": {
+      "label": "女性器灵",
+      "short": "器灵",
+      "prefix": "spirit",
+      "fields": [
+        [
+          "gender_basis",
+          "女性依据"
+        ],
+        [
+          "artifact_name",
+          "所属法宝"
+        ],
+        [
+          "artifact_type",
+          "法宝类别"
+        ],
+        [
+          "grade",
+          "法宝品阶"
+        ],
+        [
+          "manifestation_form",
+          "显化形态"
+        ],
+        [
+          "origin_method",
+          "诞生方式"
+        ],
+        [
+          "temperament",
+          "性格"
+        ],
+        [
+          "abilities",
+          "能力"
+        ],
+        [
+          "recognition_conditions",
+          "认主条件"
+        ],
+        [
+          "growth_stage",
+          "成长阶段"
+        ],
+        [
+          "limitations",
+          "能力限制"
+        ],
+        [
+          "contract_relation",
+          "契约关系"
+        ]
+      ],
+      "filters": [
+        "artifact_type",
+        "grade",
+        "origin_method",
+        "growth_stage",
+        "manifestation_form"
+      ]
+    },
+    "female_beast": {
+      "label": "女性异兽",
+      "short": "异兽",
+      "prefix": "beast",
+      "fields": [
+        [
+          "gender_basis",
+          "女性依据"
+        ],
+        [
+          "species",
+          "物种"
+        ],
+        [
+          "bloodline",
+          "血脉"
+        ],
+        [
+          "beast_rank",
+          "异兽等级"
+        ],
+        [
+          "habitat",
+          "栖息地"
+        ],
+        [
+          "ecological_role",
+          "生态位"
+        ],
+        [
+          "appearance",
+          "外形"
+        ],
+        [
+          "innate_abilities",
+          "天赋能力"
+        ],
+        [
+          "temperament",
+          "性格"
+        ],
+        [
+          "human_form_condition",
+          "化形条件"
+        ],
+        [
+          "contract_relation",
+          "契约关系"
+        ]
+      ],
+      "filters": [
+        "species",
+        "bloodline",
+        "beast_rank",
+        "habitat",
+        "ecological_role"
+      ]
+    }
+  },
+  "quality": {
+    "verified": "原文可证",
+    "inferred": "合理推导",
+    "adapted": "原创改编",
+    "pending": "待核查",
+    "conflict": "存在冲突"
+  },
+  "detail_levels": {
+    "compact": 900,
+    "standard": 3200,
+    "complete": 7600
+  },
+  "realms": [
+    "凡人",
+    "炼气",
+    "筑基",
+    "金丹",
+    "元婴",
+    "化神",
+    "炼虚",
+    "合体",
+    "大乘",
+    "渡劫",
+    "散仙",
+    "地仙",
+    "真仙",
+    "天仙",
+    "玄仙",
+    "金仙",
+    "太乙",
+    "大罗",
+    "道祖"
+  ],
+  "defaults": {
+    "enabled": true,
+    "toolsEnabled": true,
+    "promptHintEnabled": false,
+    "detailLevel": "standard",
+    "randomMode": "weighted",
+    "recentWindow": 20,
+    "allowAdaptation": true,
+    "allowPending": false,
+    "packImported": false,
+    "packVersion": ""
+  },
+  "counts": {
+    "count_min": 1,
+    "count_max": 10,
+    "limit_min": 1,
+    "limit_max": 20
+  }
+}

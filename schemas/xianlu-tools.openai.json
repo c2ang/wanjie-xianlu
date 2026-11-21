@@ -1,0 +1,263 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "xianlu_search",
+      "description": "在本地修仙资料库中检索素材。scope=entity（默认）按条件检索四类角色素材；scope=document 检索资料库原文片段，用于查找「器灵怎么诞生」「金丹期有什么特点」这类设定规则；scope=auto 先查实体，实体不足时自动附带原文片段。返回的是资料库中既有内容及出处，不是创作结果。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "type": "string",
+            "enum": [
+              "entity",
+              "document",
+              "auto"
+            ],
+            "description": "检索范围，默认 entity"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "female_cultivator",
+              "female_deity",
+              "female_artifact_spirit",
+              "female_beast"
+            ],
+            "description": "实体类别：female_cultivator（女性修仙者）、female_deity（女性神佛）、female_artifact_spirit（女性器灵）、female_beast（女性异兽）（scope=document 时可省略）"
+          },
+          "keyword": {
+            "type": "string",
+            "description": "自由文本关键词，例如“冰灵根”“剑修”“佛门”；scope=document 时为必填"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "标签，如 高冷、剑修、上古血脉"
+          },
+          "realm": {
+            "type": "string",
+            "description": "境界，如 金丹、元婴、化神"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "description": "返回条数，默认 5"
+          },
+          "allow_pending": {
+            "type": "boolean",
+            "description": "是否允许返回“待核查”素材，默认 false"
+          },
+          "detail_level": {
+            "type": "string",
+            "enum": [
+              "compact",
+              "standard",
+              "complete"
+            ],
+            "description": "返回详细程度"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "xianlu_generate",
+      "description": "从本地修仙资料库中随机抽取角色素材（女修/神佛/器灵/异兽）。适合“随机生成一位元婴期女修”“抽一只可化形的上古异兽”这类需求。返回素材要点，角色描写由你完成。器灵类素材常常只给法宝名与形制（material_note 会注明），其女子形态、样貌、性格由你自行补全。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "female_cultivator",
+              "female_deity",
+              "female_artifact_spirit",
+              "female_beast"
+            ],
+            "description": "实体类别：female_cultivator（女性修仙者）、female_deity（女性神佛）、female_artifact_spirit（女性器灵）、female_beast（女性异兽）"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10,
+            "description": "一次抽取的数量，1–10，默认 1；制卡时按需要填"
+          },
+          "filters": {
+            "type": "object",
+            "description": "硬性条件（不满足即淘汰）",
+            "properties": {
+              "realm": {
+                "type": "string",
+                "description": "境界"
+              },
+              "realm_min": {
+                "type": "string",
+                "description": "最低境界"
+              },
+              "realm_max": {
+                "type": "string",
+                "description": "最高境界"
+              },
+              "race": {
+                "type": "string",
+                "description": "种族，如 人族、妖族"
+              },
+              "bloodline": {
+                "type": "string",
+                "description": "血脉，如 上古、凤凰"
+              },
+              "grade": {
+                "type": "string",
+                "description": "法宝品阶，如 仙器"
+              },
+              "artifact_type": {
+                "type": "string",
+                "description": "法宝类别，如 剑、镜"
+              },
+              "species": {
+                "type": "string",
+                "description": "异兽物种"
+              },
+              "habitat": {
+                "type": "string",
+                "description": "栖息地"
+              },
+              "sect": {
+                "type": "string",
+                "description": "宗门"
+              },
+              "can_transform": {
+                "type": "boolean",
+                "description": "是否必须可化形"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "偏好标签，参与加权"
+              },
+              "keyword": {
+                "type": "string",
+                "description": "关键词，参与加权"
+              }
+            }
+          },
+          "random_mode": {
+            "type": "string",
+            "enum": [
+              "weighted",
+              "uniform"
+            ],
+            "description": "weighted=按标签匹配度加权，uniform=纯随机"
+          },
+          "seed": {
+            "type": "integer",
+            "description": "随机种子；相同种子+相同数据=相同结果"
+          },
+          "exclude_recent": {
+            "type": "boolean",
+            "description": "是否排除最近抽取过的素材，默认 true"
+          },
+          "detail_level": {
+            "type": "string",
+            "enum": [
+              "compact",
+              "standard",
+              "complete"
+            ],
+            "description": "返回详细程度，默认 standard"
+          }
+        },
+        "required": [
+          "category"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "xianlu_lookup",
+      "description": "按实体 ID 或名称查看完整资料。当用户想深入了解某个已检索到的角色、法宝、器灵或异兽时调用。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "实体 ID，例如 cult_0001"
+          },
+          "name": {
+            "type": "string",
+            "description": "实体名称（ID 未知时使用）"
+          },
+          "detail_level": {
+            "type": "string",
+            "enum": [
+              "compact",
+              "standard",
+              "complete"
+            ],
+            "description": "返回详细程度"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "xianlu_related",
+      "description": "查询实体的关联对象，例如某器灵所属法宝、某女修的宗门、某异兽的血脉来源、某神佛的道场与法宝。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "基准实体 ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "基准实体名称"
+          },
+          "relation_type": {
+            "type": "string",
+            "description": "只返回指定关系类型，如 belongs_to、artifact_of、habitat"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "xianlu_save_result",
+      "description": "把用户确认的抽取结果保存到插件的收藏区（不会修改人物卡或原始资料）。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "description": "被收藏的实体 ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "本次生成的角色名（原创时可填）"
+          },
+          "note": {
+            "type": "string",
+            "description": "用户备注"
+          }
+        }
+      }
+    }
+  }
+]

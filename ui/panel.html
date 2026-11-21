@@ -1,0 +1,134 @@
+<div id="wjl-panel" class="wjl-panel">
+    <div class="wjl-tabs">
+        <button class="wjl-tab active" data-wjl-tab="home">首页</button>
+        <button class="wjl-tab" data-wjl-tab="browse">浏览</button>
+        <button class="wjl-tab" data-wjl-tab="search">检索</button>
+        <button class="wjl-tab" data-wjl-tab="generate">抽取</button>
+        <button class="wjl-tab" data-wjl-tab="history">历史</button>
+        <button class="wjl-tab" data-wjl-tab="detail">详情</button>
+        <button class="wjl-tab" data-wjl-tab="settings">设置</button>
+    </div>
+
+    <div class="wjl-pane" data-wjl-pane="home">
+        <div class="wjl-stats">
+            <div class="wjl-stat"><span id="wjl-stat-docs">0</span><small>原始文档</small></div>
+            <div class="wjl-stat"><span id="wjl-stat-entities">0</span><small>实体</small></div>
+            <div class="wjl-stat"><span id="wjl-stat-relations">0</span><small>关联</small></div>
+            <div class="wjl-stat"><span id="wjl-stat-fav">0</span><small>收藏</small></div>
+        </div>
+        <div class="wjl-section-title">快速随机抽取</div>
+        <div id="wjl-cat-grid" class="wjl-cat-grid"></div>
+        <div id="wjl-quick-result" class="wjl-results"></div>
+    </div>
+
+    <div class="wjl-pane hidden" data-wjl-pane="browse">
+        <div class="wjl-toolbar">
+            <select id="wjl-browse-cat" data-wjl-act="browse-refresh">
+                <option value="">全部类别</option>
+                <option value="female_cultivator">女性修仙者</option>
+                <option value="female_deity">女性神佛</option>
+                <option value="female_artifact_spirit">女性器灵</option>
+                <option value="female_beast">女性异兽</option>
+            </select>
+            <input id="wjl-browse-kw" type="text" placeholder="关键词" />
+            <button data-wjl-act="browse-refresh">浏览</button>
+        </div>
+        <div id="wjl-browse-list" class="wjl-results"></div>
+    </div>
+
+    <div class="wjl-pane hidden" data-wjl-pane="search">
+        <div class="wjl-form">
+            <label>范围
+                <select id="wjl-search-scope">
+                    <option value="entity">角色素材</option>
+                    <option value="auto">素材+原文片段</option>
+                    <option value="document">资料库原文</option>
+                </select>
+            </label>
+            <label>类别
+                <select id="wjl-search-cat">
+                    <option value="">全部</option>
+                    <option value="female_cultivator">女性修仙者</option>
+                    <option value="female_deity">女性神佛</option>
+                    <option value="female_artifact_spirit">女性器灵</option>
+                    <option value="female_beast">女性异兽</option>
+                </select>
+            </label>
+            <label>关键词 <input id="wjl-search-kw" type="text" placeholder="如 冰灵根、剑修" /></label>
+            <label>标签 <input id="wjl-search-tags" type="text" placeholder="高冷,剑修" /></label>
+            <label>境界 <input id="wjl-search-realm" type="text" placeholder="如 元婴" /></label>
+            <button data-wjl-act="run-search">检索</button>
+        </div>
+        <div id="wjl-search-result" class="wjl-results"></div>
+    </div>
+
+    <div class="wjl-pane hidden" data-wjl-pane="generate">
+        <div class="wjl-form">
+            <label>类别
+                <select id="wjl-gen-cat">
+                    <option value="female_cultivator">女性修仙者</option>
+                    <option value="female_deity">女性神佛</option>
+                    <option value="female_artifact_spirit">女性器灵</option>
+                    <option value="female_beast">女性异兽</option>
+                </select>
+            </label>
+            <label>数量 <input id="wjl-gen-count" type="number" min="1" max="10" value="1" /></label>
+            <label>境界 <input id="wjl-gen-realm" type="text" placeholder="可留空" /></label>
+            <label>血脉 <input id="wjl-gen-blood" type="text" placeholder="如 上古" /></label>
+            <label class="wjl-inline"><input id="wjl-gen-transform" type="checkbox" /> 必须可化形</label>
+            <label>种子 <input id="wjl-gen-seed" type="text" placeholder="留空=随机" /></label>
+            <button data-wjl-act="run-generate">抽取</button>
+        </div>
+        <div id="wjl-gen-result" class="wjl-results"></div>
+    </div>
+
+    <div class="wjl-pane hidden" data-wjl-pane="history">
+        <div class="wjl-section-title">最近抽取记录（最多 30 条）</div>
+        <div id="wjl-history-list" class="wjl-history"></div>
+    </div>
+
+    <div class="wjl-pane hidden" data-wjl-pane="detail">
+        <div id="wjl-detail-box" class="wjl-results"></div>
+    </div>
+
+    <div class="wjl-pane hidden" data-wjl-pane="settings">
+        <div class="wjl-form wjl-form-col">
+            <label class="wjl-inline"><input type="checkbox" data-wjl-setting="enabled" /> 启用万界仙录</label>
+            <label class="wjl-inline"><input type="checkbox" data-wjl-setting="toolsEnabled" /> 允许 AI 通过 Function Tool 调用</label>
+            <label class="wjl-inline"><input type="checkbox" data-wjl-setting="promptHintEnabled" /> 每轮向模型注入调用提示（会增加 token 消耗）</label>
+            <label class="wjl-inline"><input type="checkbox" data-wjl-setting="allowAdaptation" /> 允许使用标注为“原创改编”的素材</label>
+            <label class="wjl-inline"><input type="checkbox" data-wjl-setting="allowPending" /> 允许使用“待核查”素材</label>
+            <label>默认返回详细程度
+                <select data-wjl-setting="detailLevel">
+                    <option value="compact">compact（约 150-300 tokens）</option>
+                    <option value="standard">standard（约 400-900 tokens）</option>
+                    <option value="complete">complete（约 1000-2000 tokens）</option>
+                </select>
+            </label>
+            <label>默认随机模式
+                <select data-wjl-setting="randomMode">
+                    <option value="weighted">加权（偏向匹配标签）</option>
+                    <option value="uniform">纯随机</option>
+                </select>
+            </label>
+            <label>近期去重数量 <input type="number" min="0" max="200" data-wjl-setting="recentWindow" /></label>
+        </div>
+
+        <div class="wjl-section-title">自检</div>
+        <div class="wjl-toolbar">
+            <button data-wjl-act="selftest">运行自检</button>
+            <span class="wjl-hint">检查资料库、检索、抽取、工具注册、命令与面板</span>
+        </div>
+        <pre id="wjl-selftest-out" class="wjl-log"></pre>
+
+        <div class="wjl-section-title">资料库管理</div>
+        <div class="wjl-toolbar">
+            <button data-wjl-act="import-builtin">导入内置资料包</button>
+            <button data-wjl-act="import-file">导入 JSON / JSONL</button>
+            <button data-wjl-act="export">导出备份</button>
+            <button data-wjl-act="clear" class="wjl-danger">清空资料库</button>
+            <input id="wjl-file-input" type="file" accept=".json,.jsonl,.txt" multiple style="display:none" />
+        </div>
+        <div id="wjl-import-progress" class="wjl-muted"></div>
+    </div>
+</div>
