@@ -1814,15 +1814,13 @@ const WJL_Ui = {
             console.warn('[万界仙录] 未找到扩展设置容器');
             return;
         }
-        let html = '';
-        try {
-            if (ctx && typeof ctx.renderExtensionTemplateAsync === 'function') {
-                html = await ctx.renderExtensionTemplateAsync(WJL_EXT_NAME, 'ui/panel');
-            }
-        } catch (e) {
-            console.warn('[万界仙录] 模板加载失败，使用内置结构', e);
+        const html = await this.loadPanelHtml(ctx);
+        if (!html) {
+            const hint = WJL_State.panelError || '';
+            host.insertAdjacentHTML('beforeend', `<div class="inline-drawer"><div class="inline-drawer-toggle inline-drawer-header"><b>万界仙录</b><div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div></div><div class="inline-drawer-content"><div id="wjl-panel" class="wjl-panel"><div class="wjl-body">面板模板加载失败。<br>请确认扩展目录里有 <code>ui/panel.html</code>；若刚更新过，按 Ctrl+F5 强刷。<br><small>${WJL_Util.esc(hint)}</small></div></div></div></div>`);
+            console.warn('[万界仙录] 面板模板加载失败：' + hint);
+            return;
         }
-        if (!html) html = '<div id="wjl-panel" class="wjl-panel"><div class="wjl-head">万界仙录</div><div class="wjl-body">模板缺失，请检查扩展文件。</div></div>';
         const wrap = document.createElement('div');
         wrap.className = 'inline-drawer';
         wrap.innerHTML = `<div class="inline-drawer-toggle inline-drawer-header"><b>万界仙录</b><div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div></div><div class="inline-drawer-content">${html}</div>`;
@@ -1830,6 +1828,47 @@ const WJL_Ui = {
         WJL_State.uiReady = true;
         this.bind(ctx);
         await this.refreshHome();
+    },
+
+    /**
+     * 加载面板 HTML。酒馆的模板 API 需要「third-party/扩展名」这种全路径，
+     * 只传扩展名会 404；再退到按 index.js 的地址 fetch 同目录的 ui/panel.html。
+     */
+    async loadPanelHtml(ctx) {
+        const full = 'third-party/' + WJL_EXT_NAME;
+        const tries = [];
+        if (ctx && typeof ctx.renderExtensionTemplateAsync === 'function') {
+            for (const name of [full, WJL_EXT_NAME]) {
+                try {
+                    const h = await ctx.renderExtensionTemplateAsync(name, 'ui/panel');
+                    if (h) return h;
+                } catch (e) {
+                    tries.push('template(' + name + '): ' + (e && e.message || e));
+                }
+            }
+        }
+        try {
+            const url = this.panelUrl();
+            if (url) {
+                const r = await fetch(url, { cache: 'no-cache' });
+                if (r.ok) return await r.text();
+                tries.push('fetch: HTTP ' + r.status + ' ' + url);
+            } else {
+                tries.push('fetch: 未找到 index.js 的 script 地址');
+            }
+        } catch (e) {
+            tries.push('fetch: ' + (e && e.message || e));
+        }
+        WJL_State.panelError = tries.join(' ｜ ');
+        return '';
+    },
+
+    /** 面板文件的绝对地址（按当前加载的 index.js 推出来，避免猜扩展目录名） */
+    panelUrl() {
+        const scripts = Array.from(document.querySelectorAll('script[src]'));
+        const own = scripts.find(el => /\/wanjie-xianlu\/index\.js(\?|$)/.test(el.getAttribute('src') || el.src));
+        if (own) return new URL('ui/panel.html', own.src).href;
+        return null;
     },
 
     $(sel) {

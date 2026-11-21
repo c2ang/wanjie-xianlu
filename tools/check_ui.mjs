@@ -50,6 +50,14 @@ for (const m of html.matchAll(/data-wjl-setting="([^"]+)"/g)) {
     if (!settingKeys.has(m[1])) problems.push(`面板设置项没有对应默认值：${m[1]}`);
 }
 
+// 面板模板必须按「third-party/扩展名」全路径取，否则酒馆里会 404（v1.2.1 修过的真实 bug）
+if (!/'third-party\/' \+ WJL_EXT_NAME/.test(js)) {
+    problems.push('加载面板模板时必须用 third-party/ 前缀（renderExtensionTemplateAsync(WJL_EXT_NAME) 会 404）');
+}
+if (!/ui\/panel\.html/.test(js)) {
+    problems.push('index.js 里没有 ui/panel.html 的 fetch 兜底路径');
+}
+
 console.log(`面板 id ${htmlIds.size} 个 / 代码引用 ${usedIds.size} 个 / 动作 ${actsInHtml.size} 个`);
 if (problems.length) {
     console.log(`\n✗ ${problems.length} 个问题：`);
