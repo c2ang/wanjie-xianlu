@@ -1728,7 +1728,7 @@ const WJL_SelfTest = {
                 if (mainApi !== 'openai') {
                     why = '当前主 API 是「' + mainApi + '」，工具调用只在「聊天补全 (OpenAI 兼容)」下可用';
                 } else if (!oai.function_calling) {
-                    why = '聊天补全设置里没开「函数调用 / Enable function calling」';
+                    why = '「AI 响应配置」里没勾 Enable function calling —— 点上面的「开启函数调用」按钮即可';
                 } else if (oai.custom_prompt_post_processing
                     && !['NONE', 'MERGE_TOOLS', 'SEMI_TOOLS', 'STRICT_TOOLS'].includes(oai.custom_prompt_post_processing)) {
                     why = '自定义提示词后处理设为 ' + oai.custom_prompt_post_processing + '，会破坏工具调用，请改为「无 / 合并工具」等';
@@ -1984,6 +1984,31 @@ const WJL_Ui = {
         if (tab === 'home') this.refreshHome();
     },
 
+    /**
+     * 帮用户勾上酒馆的「Enable function calling」。
+     * 只改这一项，其余设置不动；改完立即触发保存。
+     */
+    enableFunctionCalling() {
+        const ctx = getStContext();
+        const oai = ctx && ctx.chatCompletionSettings;
+        if (!oai) {
+            return { ok: false, message: '读不到聊天补全设置，请手动到「AI 响应配置」里勾选 Enable function calling' };
+        }
+        if (ctx.mainApi && ctx.mainApi !== 'openai') {
+            return { ok: false, message: `当前主 API 是「${ctx.mainApi}」，工具调用只在「聊天补全 (OpenAI 兼容)」下可用，改这个开关没用` };
+        }
+        oai.function_calling = true;
+        try {
+            const box = document.getElementById('openai_function_calling');
+            if (box) { box.checked = true; box.dispatchEvent(new Event('input', { bubbles: true })); }
+        } catch (e) { /* 面板不在前台时忽略 */ }
+        try {
+            if (typeof ctx.saveSettingsDebounced === 'function') ctx.saveSettingsDebounced();
+            else if (typeof ctx.saveSettings === 'function') ctx.saveSettings();
+        } catch (e) { /* 保存失败也不影响本次会话 */ }
+        return { ok: true, message: '已开启「Enable function calling」；如果模型本身不支持 tools，仍然调不起来' };
+    },
+
     toast(msg, kind) {
         if (typeof toastr !== 'undefined') {
             const fn = kind === 'error' ? 'error' : 'success';
@@ -2137,6 +2162,14 @@ const WJL_Ui = {
             const r = await WJL_SelfTest.run();
             if (box) box.textContent = r.text;
             this.toast(r.ok ? '自检通过' : ('自检未通过：' + r.fails.join('、')), r.ok ? 'success' : 'error');
+            return;
+        }
+        if (act === 'enable-tools') {
+            const r = WJL_Ui.enableFunctionCalling();
+            this.toast(r.message, r.ok ? 'success' : 'error');
+            const box = document.getElementById('wjl-selftest-out');
+            const st = await WJL_SelfTest.run();
+            if (box) box.textContent = st.text;
             return;
         }
         if (act === 'import-builtin') {

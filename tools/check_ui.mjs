@@ -17,7 +17,8 @@ const root = join(here, '..');
 const js = readFileSync(join(root, 'plugin', 'index.js'), 'utf8');
 const html = readFileSync(join(root, 'plugin', 'ui', 'panel.html'), 'utf8');
 
-const DYNAMIC_IDS = new Set(['wjl-quick-result', 'extensions_settings']);
+// 酒馆自己的元素（不是本插件面板里的），允许引用
+const DYNAMIC_IDS = new Set(['wjl-quick-result', 'extensions_settings', 'openai_function_calling']);
 
 const htmlIds = new Set([...html.matchAll(/id="([^"]+)"/g)].map(m => m[1]));
 const usedIds = new Set([
