@@ -1707,8 +1707,10 @@ const WJL_SelfTest = {
         } catch (e) { ok(false, '原文检索', String((e && e.message) || e)); }
 
         try {
-            const a = await WJL_Controller.generate({ category: 'female_cultivator', count: 1, seed: 20261121 });
-            const b = await WJL_Controller.generate({ category: 'female_cultivator', count: 1, seed: 20261121, exclude_recent: false });
+            // 两次用完全相同的参数（都关闭近期去重）：否则第一次抽取会写进历史，改变第二次的候选池
+            const probe = { category: 'female_cultivator', count: 1, seed: 20261121, exclude_recent: false };
+            const a = await WJL_Controller.generate({ ...probe });
+            const b = await WJL_Controller.generate({ ...probe });
             const ida = a.payload.results.map(r => r.id).join(',');
             const idb = b.payload.results.map(r => r.id).join(',');
             ok(!!ida && ida === idb, '抽取可复现', ida === idb ? ida : (ida + ' ≠ ' + idb));
@@ -1717,13 +1719,34 @@ const WJL_SelfTest = {
         const toolNames = ['xianlu_search', 'xianlu_generate', 'xianlu_lookup', 'xianlu_related', 'xianlu_save_result'];
         ok(!!WJL_State.toolsRegistered, 'Function Tool 已注册', WJL_State.toolsRegistered ? (toolNames.length + ' 个：' + toolNames.join(' / ')) : '未注册，检查「允许 AI 调用」开关');
         if (ctx && typeof ctx.isToolCallingSupported === 'function') {
-            try { ok(!!ctx.isToolCallingSupported(), '当前模型支持工具调用', ''); } catch (e) { /* 忽略 */ }
+            let supported = false;
+            let why = '';
+            try { supported = !!ctx.isToolCallingSupported(); } catch (e) { why = String((e && e.message) || e); }
+            if (!supported && !why) {
+                const mainApi = ctx.mainApi || '(未知)';
+                const oai = ctx.chatCompletionSettings || {};
+                if (mainApi !== 'openai') {
+                    why = '当前主 API 是「' + mainApi + '」，工具调用只在「聊天补全 (OpenAI 兼容)」下可用';
+                } else if (!oai.function_calling) {
+                    why = '聊天补全设置里没开「函数调用 / Enable function calling」';
+                } else if (oai.custom_prompt_post_processing
+                    && !['NONE', 'MERGE_TOOLS', 'SEMI_TOOLS', 'STRICT_TOOLS'].includes(oai.custom_prompt_post_processing)) {
+                    why = '自定义提示词后处理设为 ' + oai.custom_prompt_post_processing + '，会破坏工具调用，请改为「无 / 合并工具」等';
+                } else {
+                    why = '当前模型/接口不支持 tools，或模型未在支持列表内';
+                }
+            }
+            ok(supported, '当前模型支持工具调用', why);
         }
 
         if (ctx && ctx.SlashCommandParser && ctx.SlashCommandParser.commands) {
             const cmds = ctx.SlashCommandParser.commands;
-            const has = typeof cmds.has === 'function' && cmds.has('xianlu');
-            ok(has, '斜杠命令 /xianlu', has ? '/万界仙录、/wjl 别名可用' : '未找到命令');
+            // SlashCommandParser.commands 是普通对象（不是 Map），Map 的 has() 会永远返回 false
+            const get = (k) => (typeof cmds.get === 'function' ? cmds.get(k) : cmds[k]);
+            const cmd = get('xianlu');
+            const has = !!cmd;
+            const aliasOk = !!cmd && Array.isArray(cmd.aliases) && cmd.aliases.includes('wjl');
+            ok(has, '斜杠命令 /xianlu', has ? ('已注册' + (aliasOk ? '，别名 /万界仙录、/wjl 可用' : '')) : '未找到命令（SlashCommandParser 未暴露，或注册时机过早）');
         }
 
         const doc = (typeof document !== 'undefined' && document) ? document : null;

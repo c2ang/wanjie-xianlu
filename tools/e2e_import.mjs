@@ -143,7 +143,8 @@ check('抽取历史已记录', mem.history.size >= 1);
 console.log('6) 浏览器自检模块');
 api.WJL_State.ctx = {
     isToolCallingSupported: () => true,
-    SlashCommandParser: { commands: new Map([['xianlu', {}]]) },
+    // ST 里 SlashCommandParser.commands 是普通对象，不是 Map——按真实结构注入
+    SlashCommandParser: { commands: { xianlu: { aliases: ['万界仙录', 'wjl'] } } },
 };
 api.WJL_State.toolsRegistered = true;
 const st = await api.WJL_SelfTest.run();
